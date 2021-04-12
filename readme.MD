@@ -11,12 +11,29 @@ Minimap generator from Age Of Empires 2 game savegames.
 - Vesion 0.1 only works with MGX files.
 
 ## Usage
-Place the saved games in the same path as the Python file, after having installed the necessary dependencies, run the Python script, voila, map images will be generated, displayed and saved in the same directory.
+Place the saved games in the same path as the Python script file, after having installed the necessary dependencies, run the Python script, voila, map images will be generated, displayed and saved in the same directory.
 
+## Dependencies
+** Linux **
+```
+sudo pip3 install pillow
+```
+or
+```
+sudo python3 -m pip install pillow
+```
+
+** Windows **
+```
+pip install Pillow
+```
 ## TODO
-:white_check_mark: Generate map from a saved game (.mgz, mgx, mgl, etc).
+:ballot_box_with_check: Generate map from a saved game (.mgx).
+
 :black_square_button: Add transparency.
+
 :black_square_button: Put the gold and stone resources.
+
 :black_square_button: Location of each player.
 
 ## Credits
