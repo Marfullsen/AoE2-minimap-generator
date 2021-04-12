@@ -8,14 +8,18 @@ from PIL import ImageColor
 from mgz.summary import Summary
 from mgz.const import MAP_SIZES
 
+from player_pointer import draw_point
+
 map_sizes = dict(zip(MAP_SIZES.values(),MAP_SIZES.keys()))
 
-recorded_games = []
-supported_extensions = ('.mgl', '.mgx', '.mgz', '.aoe2record')
+def get_savedgames():
+    recorded_games = []
+    supported_extensions = ('.mgl', '.mgx', '.mgz', '.aoe2record')
 
-for recorded_game in range(len(supported_extensions)):
-    if glob.glob('*'+supported_extensions[recorded_game]):
-        recorded_games += glob.glob('*'+supported_extensions[recorded_game])
+    for recorded_game in range(len(supported_extensions)):
+        if glob.glob('*'+supported_extensions[recorded_game]):
+            recorded_games += glob.glob('*'+supported_extensions[recorded_game])
+    return recorded_games
 
 forty_colors = ['#339727', '#305db6', '#e8b478', '#e4a252', '#5492b0', '#339727', '#e4a252', '#82884d', '#82884d', '#339727', '#157615', '#e4a252', '#339727', '#157615', '#e8b478', '#305db6', '#339727', '#157615', '#157615', '#157615', '#157615', '#157615', '#004aa1', '#004abb', '#e4a252', '#e4a252', '#ffec49', '#e4a252', '#305db6', '#82884d', '#82884d', '#82884d', '#c8d8ff', '#c8d8ff', '#c8d8ff', '#98c0f0', '#c8d8ff', '#98c0f0', '#c8d8ff', '#c8d8ff', '#e4a252']
 
@@ -29,6 +33,8 @@ def to_rgb(farbe: str) -> tuple(['rrr','ggg','bbb']):
 def write_minimap(input_file: str) -> 'output file: {input_file}.png':
     with open(f'{input_file}', 'rb') as data:
         mapa = Summary(data).get_map()
+        players = Summary(data).get_players()
+        objects = Summary(data).get_objects()
         
     map_size = map_sizes[mapa['size']]
     TOTAL_TILES = map_size ** 2
@@ -43,6 +49,12 @@ def write_minimap(input_file: str) -> 'output file: {input_file}.png':
         terreno = mapa['tiles'][i]['terrain_id'] 
         img.putpixel((x,y), to_rgb((forty_colors[terreno])[1:]))
         
+    for player in players:
+        for objects in player:
+            x = player['position'][0]
+            y = player['position'][1]
+            draw_point(img, x, y, player['color_id'])
+            
     angle = 45
     rotated = img.rotate(angle, resample=Image.BICUBIC, expand=True)
     rotated = rotated.resize((int(map_size*1.5), map_size))
@@ -51,7 +63,7 @@ def write_minimap(input_file: str) -> 'output file: {input_file}.png':
     output_file_name = f'{input_file[:-4]}.png'
     final_image.save(output_file_name)
     final_image.show()
-
-# Test
-for rec in recorded_games:
-    write_minimap(rec)
+    
+if __name__== "__main__":
+    for rec in get_savedgames():
+        write_minimap(rec)

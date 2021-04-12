@@ -1,11 +1,12 @@
 # AoE2 Minimap Generator
 [![Python](https://img.shields.io/badge/Python-3.7.7-blue.svg)](https://www.python.org/)
 [![Pillow](https://img.shields.io/badge/Pillow-8.0.0-green.svg)](https://pypi.org/project/Pillow/)
+[![Mgz](https://img.shields.io/badge/Mgz-1.5.0-green.svg)](https://pypi.org/project/mgz/)
 
 [![Screenshot](./screenshot_001.png)](https://github.com/Marfullsen/AoE2-minimap-generator)
 
 ## Description
-Minimap generator from Age Of Empires 2 game savegames.
+Minimap generator from Age Of Empires 2 savegames.
 
 ## Features
 - Vesion 0.2 works with .mgl, .mgx, .mgz and .aoe2record files.
@@ -48,4 +49,4 @@ Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie
 :black_square_button: Location of each player.
 
 ## Credits
-Thanks to [aoc-mgz](https://github.com/happyleavesaoc/aoc-mgz) by [HappyLeavesAoC](https://github.com/happyleavesaoc/).
+Thanks to [aoc-mgz](https://github.com/happyleavesaoc/aoc-mgz) by [HappyLeavesAoC](https://github.com/happyleavesaoc/) for the extract functions.
