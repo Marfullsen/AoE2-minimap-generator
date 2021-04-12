@@ -4,11 +4,11 @@
 
 [![Screenshot](./screenshot_001.png)](https://github.com/Marfullsen/AoE2-minimap-generator)
 
-## Desc
+## Description
 Minimap generator from Age Of Empires 2 game savegames.
 
 ## Features
-- Vesion 0.1 only works with MGX files.
+- Vesion 0.2 works with .mgl, .mgx, .mgz and .aoe2record files.
 
 ## Dependencies
 - [mgz](https://github.com/happyleavesaoc/aoc-mgz) (Also via pip: `pip install mgz`)
@@ -18,6 +18,7 @@ Minimap generator from Age Of Empires 2 game savegames.
 Place the saved games in the same path as the Python script file, **after having installed the necessary dependencies**, run the Python script, voilà, map images will be generated, displayed and saved in the same directory.
 
 ## Installing Dependencies
+Try these commands until you find one that works for you (this is because each linux distro is very picky), one of them should be suitable for you.
 **Linux**
 ```
 sudo pip3 install pillow
@@ -38,9 +39,9 @@ Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie
 [![colors](./colors.png)](https://github.com/Marfullsen/AoE2-minimap-generator/blob/master/colors_available.py)
 
 ## TODO
-:heavy_check_mark: Generate map from a saved game (.mgx).
+:heavy_check_mark: Generate map from a saved game (.mgl, .mgx, .mgz and .aoe2record files).
 
-:black_square_button: Add transparency.
+:heavy_check_mark: Rotate the map and add transparency to the background.
 
 :black_square_button: Put the gold and stone resources.
 
