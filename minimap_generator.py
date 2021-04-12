@@ -33,7 +33,6 @@ def write_minimap():
     TOTAL_TILES = MAP_SIZE ** 2
     img = Image.new('RGB', (MAP_SIZE, MAP_SIZE))
     x,y = (0,0)
-    #all_tiles = list()
     for i in range(TOTAL_TILES):
         x = mapa['tiles'][i]['x']
         y = mapa['tiles'][i]['y']
