@@ -35,7 +35,7 @@ pip install Pillow
 ## Tiles colors available.
 Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie-js/recage/blob/master/examples/map/terrainColors.json).
 
-[!colors(./colors.png)](https://github.com/Marfullsen/AoE2-minimap-generator/blob/master/colors_available.py)
+[![colors](./colors.png)](https://github.com/Marfullsen/AoE2-minimap-generator/blob/master/colors_available.py)
 
 ## TODO
 :heavy_check_mark: Generate map from a saved game (.mgx).
