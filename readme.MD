@@ -46,7 +46,7 @@ Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie
 
 :black_square_button: Put the gold and stone resources.
 
-:black_square_button: Location of each player.
+:heavy_check_mark: Location of each player.
 
 ## Credits
 Thanks to [aoc-mgz](https://github.com/happyleavesaoc/aoc-mgz) by [HappyLeavesAoC](https://github.com/happyleavesaoc/) for the extract functions.
