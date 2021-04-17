@@ -35,6 +35,7 @@ def write_minimap(input_file: str) -> 'output file: {input_file}.png':
         mapa = Summary(data).get_map()
         players = Summary(data).get_players()
         objects = Summary(data).get_objects()
+        header = Summary(data).get_header()
         
     map_size = map_sizes[mapa['size']]
     TOTAL_TILES = map_size ** 2
@@ -48,7 +49,22 @@ def write_minimap(input_file: str) -> 'output file: {input_file}.png':
         y = mapa['tiles'][i]['y']
         terreno = mapa['tiles'][i]['terrain_id'] 
         img.putpixel((x,y), to_rgb((forty_colors[terreno])[1:]))
-        
+
+    resources = header['initial']['players'][0]['objects']
+    for resource in resources:
+        if resource['object_type'] in [59, 833, 594, 65, 48, 810, 1026, 822, 1031, 1139, 69, 455, 456, 458, 457, 450, 451, 452]: #A5C46C, Food: berry_bush, fish, other animals.
+            img.putpixel( (int(resource['x']), int(resource['y'])), to_rgb('A5C46C'))
+        if resource['object_type'] == 102: #919191, stone_pile
+            img.putpixel( (int(resource['x']), int(resource['y'])), to_rgb('919191'))
+        if resource['object_type'] == 66: #FFC700, gold_pile
+            img.putpixel( (int(resource['x']), int(resource['y'])), to_rgb('FFC700'))
+        if resource['object_type'] == 285: #FFF, Relic
+            img.putpixel( (int(resource['x']), int(resource['y'])), to_rgb('FFFFFF'))
+            img.putpixel( (int(resource['x']+1), int(resource['y'])), to_rgb('FFFFFF'))
+            img.putpixel( (int(resource['x']), int(resource['y'])+1), to_rgb('FFFFFF'))
+            img.putpixel( (int(resource['x']-1), int(resource['y'])), to_rgb('FFFFFF'))
+            img.putpixel( (int(resource['x']), int(resource['y'])-1), to_rgb('FFFFFF'))
+            
     for player in players:
         for objects in player:
             x = player['position'][0]

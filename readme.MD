@@ -20,6 +20,7 @@ Place the saved games in the same path as the Python script file, **after having
 
 ## Installing Dependencies
 Try these commands until you find one that works for you (this is because each linux distro is very picky), one of them should be suitable for you.
+
 **Linux**
 ```
 sudo pip3 install pillow
@@ -44,9 +45,13 @@ Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie
 
 :heavy_check_mark: Rotate the map and add transparency to the background.
 
-:black_square_button: Put the gold and stone resources.
-
 :heavy_check_mark: Location of each player.
 
+:heavy_check_mark: Put the piles of gold and stone resources.
+
+:heavy_check_mark: Put the food resorces (berry bushes, animals like sheeps, fishes, boars, etc.)
+
+:heavy_check_mark: Show Relics on the map
+
 ## Credits
-Thanks to [aoc-mgz](https://github.com/happyleavesaoc/aoc-mgz) by [HappyLeavesAoC](https://github.com/happyleavesaoc/) for the extract functions.
+Thanks to [aoc-mgz](https://github.com/happyleavesaoc/aoc-mgz) by [@HappyLeavesAoC](https://github.com/happyleavesaoc/) for the extract functions.
