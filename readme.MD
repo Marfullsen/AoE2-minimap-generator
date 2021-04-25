@@ -84,5 +84,9 @@ Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie
 
 [![square_with_resources_and_players](./square_map_with_resources_and_players.png)]()
 
+## Contributing
+All contributions are welcome!
+Feel free to open a pull request.
+
 ## Credits
 Thanks to [aoc-mgz](https://github.com/happyleavesaoc/aoc-mgz) by [@HappyLeavesAoC](https://github.com/happyleavesaoc/) for the extract functions.
