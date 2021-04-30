@@ -50,18 +50,20 @@ Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie
 
 [![colors](./colors.png)](https://github.com/Marfullsen/AoE2-minimap-generator/blob/master/colors_available.py)
 
-## All TODOs finished.
-:heavy_check_mark: Generate minimap from a saved game (.mgl, .mgx, .mgz and .aoe2record files).
+## TODOs.
+:heavy_check_mark: Add new TODOs.
 
-:heavy_check_mark: Rotate the minimap and add transparency to the background.
+:black_square_button: Fix bugs with some map sizes.
 
-:heavy_check_mark: Location of each player.
+:black_square_button: Add walls when fortress (or whenever).
 
-:heavy_check_mark: Put the piles of gold and stone resources.
+:black_square_button: Unify all code to a single 'main.py' file.
 
-:heavy_check_mark: Put the food resorces (berry bushes, animals like sheeps, fishes, boars, etc.)
+:black_square_button: Create a .exe file to non-python users.
 
-:heavy_check_mark: Show Relics on the minimap
+:black_square_button: Add more tests, with more maps & more sizes.
+
+:black_square_button: Tidy up all the mess with the files and screenshots.
 
 ## Development Screenshots
 
