@@ -4,13 +4,22 @@
 import glob
 
 from PIL import Image
+from PIL import ImageDraw
 from PIL import ImageColor
 from mgz.summary import Summary
 from mgz.const import MAP_SIZES
 
-from player_pointer import draw_point
-
 map_sizes = dict(zip(MAP_SIZES.values(),MAP_SIZES.keys()))
+
+player_colors = ('#0000DD', '#ff0000', '#00ff00', '#ffff00', '#00ffff', '#ff00ff', '#434343', '#ff8201')
+
+def draw_point(img, x, y, color):
+    color = player_colors[color]
+    draw = ImageDraw.Draw(img)
+    far = 6
+    x1,y1,x2,y2 = (x-5, y-5, x+5, y+5)
+    draw.ellipse((x1,y1, x2, y2), fill=color)
+    draw.ellipse((x1-far,y1-far, x2+far, y2+far), outline=color, width=3)
 
 def get_savedgames():
     recorded_games = []
