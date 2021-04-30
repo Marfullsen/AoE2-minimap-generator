@@ -1,9 +1,9 @@
-﻿# AoE2 Minimap Generator
+# AoE2 Minimap Generator
 [![Python](https://img.shields.io/badge/Python-3.7.7-blue.svg)](https://www.python.org/)
 [![Pillow](https://img.shields.io/badge/Pillow-8.0.0-green.svg)](https://pypi.org/project/Pillow/)
 [![Mgz](https://img.shields.io/badge/Mgz-1.5.0-green.svg)](https://pypi.org/project/mgz/)
 
-[![Screenshot](./screenshots/screenshot_001.png)](https://github.com/Marfullsen/AoE2-minimap-generator)
+[![Screenshot](./screenshot_001.png)](https://github.com/Marfullsen/AoE2-minimap-generator)
 
 ## Description
 Minimap generator for Age of Empires 2 savegames.
@@ -48,41 +48,43 @@ pip install Pillow
 ## Tiles colors available.
 Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie-js/recage/blob/master/examples/map/terrainColors.json).
 
-[![colors](./screenshots/colors.png)](https://github.com/Marfullsen/AoE2-minimap-generator/blob/master/colors_available.py)
+[![colors](./colors.png)](https://github.com/Marfullsen/AoE2-minimap-generator/blob/master/colors_available.py)
 
-## All TODOs finished.
-:heavy_check_mark: Generate minimap from a saved game (.mgl, .mgx, .mgz and .aoe2record files).
+## TODOs.
+:heavy_check_mark: Add new TODOs.
 
-:heavy_check_mark: Rotate the minimap and add transparency to the background.
+:black_square_button: Fix bugs with some map sizes.
 
-:heavy_check_mark: Location of each player.
+:black_square_button: Add walls when fortress (or whenever).
 
-:heavy_check_mark: Put the piles of gold and stone resources.
+:black_square_button: Unify all code to a single 'main.py' file.
 
-:heavy_check_mark: Put the food resorces (berry bushes, animals like sheeps, fishes, boars, etc.)
+:black_square_button: Create a .exe file to non-python users.
 
-:heavy_check_mark: Show Relics on the minimap
+:black_square_button: Add more tests, with more maps & more sizes.
+
+:black_square_button: Tidy up all the mess with the files and screenshots.
 
 ## Development Screenshots
 
 **Final without resources**
 
-[![No Resources](./screenshots/screenshot_003.png)]()
+[![No Resources](./screenshot_003.png)]()
 
 
 **Square without resources**
 
-[![square_no_resources](./screenshots/square_map_no_resources.png)]()
+[![square_no_resources](./square_map_no_resources.png)]()
 
 
 **Square with resources**
 
-[![square_with_resources](./screenshots/square_map_with_resources.png)]()
+[![square_with_resources](./square_map_with_resources.png)]()
 
 
 **Square with resources and players**
 
-[![square_with_resources_and_players](./screenshots/square_map_with_resources_and_players.png)]()
+[![square_with_resources_and_players](./square_map_with_resources_and_players.png)]()
 
 ## Contributing
 All contributions are welcome!

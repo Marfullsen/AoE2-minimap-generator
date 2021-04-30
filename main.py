@@ -40,11 +40,14 @@ def to_rgb(farbe: str) -> tuple(['rrr','ggg','bbb']):
     return tuple(int(farbe[i:i+2], 16) for i in (0, 2, 4))
 
 def write_minimap(input_file: str) -> 'output file: {input_file}.png':
+    global mapa, players, objects, header
     with open(f'{input_file}', 'rb') as data:
-        mapa = Summary(data).get_map()
-        players = Summary(data).get_players()
-        objects = Summary(data).get_objects()
-        header = Summary(data).get_header()
+        summary = Summary(data)
+        
+    mapa = summary.get_map()
+    players = summary.get_players()
+    objects = summary.get_objects()
+    header = summary.get_header()
         
     map_size = map_sizes[mapa['size']]
     TOTAL_TILES = map_size ** 2
@@ -75,10 +78,26 @@ def write_minimap(input_file: str) -> 'output file: {input_file}.png':
             img.putpixel( (int(resource['x']), int(resource['y'])-1), to_rgb('FFFFFF'))
             
     for player in players:
-        for objects in player:
+        for coordinates in player:
             x = player['position'][0]
             y = player['position'][1]
             draw_point(img, x, y, player['color_id'])
+            
+    for obj in objects.get('objects'):
+        if obj['object_id'] == 72: # Palisade wall.
+            img.putpixel( (int(obj['x']), int(obj['y'])), to_rgb( player_colors[players[obj['player_number']-1]['color_id']][1:] ) )
+            
+        if obj['object_id'] == 117: # Stone wall.
+            img.putpixel( (int(obj['x']), int(obj['y'])), to_rgb( player_colors[players[obj['player_number']-1]['color_id']][1:] ) )
+            
+        if obj['object_id'] == 155: # Fortified wall.
+            img.putpixel( (int(obj['x']), int(obj['y'])), to_rgb( player_colors[players[obj['player_number']-1]['color_id']][1:] ) )
+            
+        if obj['object_id'] in [64, 81, 88, 95]: # Stone gate.
+            img.putpixel( (int(obj['x']), int(obj['y'])), to_rgb( player_colors[players[obj['player_number']-1]['color_id']][1:] ) )
+            
+        if obj['object_id'] in [662, 666, 670, 674]: # Palisade gate.
+            img.putpixel( (int(obj['x']), int(obj['y'])), to_rgb( player_colors[players[obj['player_number']-1]['color_id']][1:] ) )
             
     angle = 45
     rotated = img.rotate(angle, resample=Image.BICUBIC, expand=True)
