@@ -3,24 +3,26 @@
 [![Pillow](https://img.shields.io/badge/Pillow-8.0.0-green.svg)](https://pypi.org/project/Pillow/)
 [![Mgz](https://img.shields.io/badge/Mgz-1.5.0-green.svg)](https://pypi.org/project/mgz/)
 
-[![Screenshot](./screenshots/screenshot_001.png)](https://github.com/Marfullsen/AoE2-minimap-generator)
+[![Screenshot](./screenshots/screenshot_001.png)](https://github.com/Marfullsen/AoE2-minimap-generator) 
+[![Walls](./screenshots/fortress.png)](https://github.com/Marfullsen/AoE2-minimap-generator)
 
 ## Description
 Minimap generator for Age of Empires 2 savegames.
 
 ## Features
-Vesion 1.0, working perfectly.
+Vesion 1.1
+- The bugs with some map sizes were fixed.
+- Walls are now displayed on the minimap.
+- All code was unified to a single 'main.py' file.
+- New screenshots added to the readme.
+- The code was tidied up, funcions are now more readable.
 
+version 1.0.
 - Generate minimap from a saved game (.mgl, .mgx, .mgz and .aoe2record files).
-
 - Rotate the map and add transparency to the background.
-
 - Display the location of each player.
-
 - Display the piles of gold and stone resources.
-
 - Display the food resorces (berry bushes, animals like sheeps, fishes, boars, etc.)
-
 - Display Relics on the minimap
 
 ## Dependencies
@@ -53,19 +55,23 @@ Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie
 ## TODOs.
 :heavy_check_mark: Add new TODOs.
 
-:black_square_button: Fix bugs with some map sizes.
+:heavy_check_mark: Fix bugs with some map sizes.
 
-:black_square_button: Add walls when fortress (or whenever).
+:heavy_check_mark: Add walls when fortress (or whenever).
 
-:black_square_button: Unify all code to a single 'main.py' file.
+:heavy_check_mark: Unify all code to a single 'main.py' file.
 
 :black_square_button: Create a .exe file to non-python users.
 
 :black_square_button: Add more tests, with more maps & more sizes.
 
-:black_square_button: Tidy up all the mess with the files and screenshots.
+:heavy_check_mark: Tidy up all the mess with the files and screenshots.
 
 ## Development Screenshots
+
+**White walls**
+
+[![White Walls](./screenshots/white_walls.png)]()
 
 **Final without resources**
 
