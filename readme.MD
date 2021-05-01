@@ -30,7 +30,11 @@ version 1.0.
 - [Pillow](https://pillow.readthedocs.io/en/stable/installation.html). (also via pip: `pip install Pillow`)
 
 ## Usage
-Place the saved games in the same path as the Python script files, **after having installed the necessary dependencies**, run the Python script **"minimap_generator.py"**, voilà, minimap images will be generated, displayed and saved in the same directory.
+First, make sure you have **Python3** installed on your machine.
+
+Place the saved games **in the same path as the Python script**, then **after having installed the necessary dependencies** run the Python script **"main.py"**, voilà, minimap images will be generated, displayed and saved in the same directory.
+
+You could also move the python script called 'main.py' to your folder with the savesgames, run the script and it should work.
 
 ## Installing Dependencies
 Try these commands until you find one that works for you (this is because each linux distro is very picky), one of them should be suitable for you. [source: this question on Stack Overflow](https://stackoverflow.com/questions/20060096/installing-pil-with-pip)
@@ -46,6 +50,13 @@ sudo python3 -m pip install pillow
 ```
 pip install Pillow
 ```
+
+## The code inside of the Main script file.
+
+**Just scroll to the end of the file, this is the master function**
+
+[![Main script](./screenshots/main_code.png)]()
+
 
 ## Tiles colors available.
 Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie-js/recage/blob/master/examples/map/terrainColors.json).
