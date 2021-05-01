@@ -73,6 +73,7 @@ Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie
 
 [![White Walls](./screenshots/white_walls.png)]()
 
+
 **Final without resources**
 
 [![No Resources](./screenshots/screenshot_003.png)]()
@@ -91,6 +92,12 @@ Extracted from [recage/examples/map/terrainColors.json](https://github.com/genie
 **Square with resources and players**
 
 [![square_with_resources_and_players](./screenshots/square_map_with_resources_and_players.png)]()
+
+
+**Extra Large Player Points**
+
+[![Extra-Large PP](./screenshots/extra-large-player-points.png)]()
+
 
 ## Contributing
 All contributions are welcome!
