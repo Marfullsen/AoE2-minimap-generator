@@ -10,7 +10,7 @@ from mgz.summary import Summary
 from mgz.const import MAP_SIZES
 
 map_sizes = dict(zip(MAP_SIZES.values(),MAP_SIZES.keys()))
-player_colors = ('#0000DD', '#ff0000', '#00ff00', '#ffff00', '#00ffff', '#ff00ff', '#434343', '#ff8201')
+player_colors = ('#0000DD', '#ff0000', '#00ff00', '#ffff00', '#00ffff', '#ff00ff', '#E9E9E9', '#ff8201')
 
 def draw_point(canvas, x, y, color):
     '''Points the initial player position with a special large circle'''
