@@ -1,7 +1,7 @@
 ﻿# AoE2 Minimap Generator
 [![Python](https://img.shields.io/badge/Python-3.7.7-blue.svg)](https://www.python.org/)
-[![Pillow](https://img.shields.io/badge/Pillow-8.0.0-green.svg)](https://pypi.org/project/Pillow/)
-[![Mgz](https://img.shields.io/badge/Mgz-1.5.0-green.svg)](https://pypi.org/project/mgz/)
+[![Pillow](https://img.shields.io/badge/pillow-12.3.0-green.svg)](https://pypi.org/project/Pillow/)
+[![Mgz](https://img.shields.io/badge/Mgz-1.8.51-green.svg)](https://pypi.org/project/mgz/)
 
 [![Screenshot](./screenshots/screenshot_001.png)](https://github.com/Marfullsen/AoE2-minimap-generator) 
 [![Walls](./screenshots/fortress.png)](https://github.com/Marfullsen/AoE2-minimap-generator)
@@ -10,6 +10,14 @@
 Minimap generator for Age of Empires 2 savegames.
 
 ## Features
+Version 1.2
+- Fixed a crash on all modern recorded games (RMS/skirmish/ranked)-
+- Fixed missing terrain on some maps by pulling the terrain color table from `mgz`'s bundled reference data (101 known terrain IDs).
+- Fixed a wall-coloring bug from Gaia-owned wall/gate objects.
+- Fixed a crash on files where the map size came back as a differently-cased or unrecognized name (e.g. "Large" vs "large").
+- Expanded the recognized food resource objects (added goats, ibex, zebras, and other animals added to the game since v1.1).
+- **Known limitation:** replays recorded after the February 17, 2026 "Last Chieftains" DLC update currently fail to parse, due to an unresolved upstream bug in `mgz` itself ([issue #138](https://github.com/happyleavesaoc/aoc-mgz/issues/138)). This isn't fixable from this repo; it needs an upstream `mgz` fix.
+
 Vesion 1.1
 - The bugs with some map sizes were fixed.
 - Walls are now displayed on the minimap.
